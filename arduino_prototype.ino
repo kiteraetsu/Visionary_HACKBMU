@@ -1,3 +1,26 @@
+const int trigPin_l = 9;
+const int echoPin_l= 10;
+const int trigPin_f = 7;
+const int echoPin_f= 8;
+const int trigPin_r= 3;
+const int echoPin_r= 4;
+const int relay_l=5;
+const int relay_r=6;
+
+// defines variables
+long duration_l,duration_r,duration_f;
+int distance_l,distance_r,distance_f;
+void setup() {
+pinMode(trigPin_l, OUTPUT); // Sets the trigPin as an Output
+pinMode(echoPin_l, INPUT); // Sets the echoPin as an Input
+pinMode(trigPin_r, OUTPUT); // Sets the trigPin as an Output
+pinMode(echoPin_r, INPUT); // Sets the echoPin as an Input
+pinMode(trigPin_f, OUTPUT); // Sets the trigPin as an Output
+pinMode(echoPin_f, INPUT); // Sets the echoPin as an Input
+pinMode(relay_l, OUTPUT);
+pinMode(relay_r, OUTPUT);
+Serial.begin(9600); // Starts the serial communication
+}
 void loop() {
 
 digitalWrite(trigPin_l, LOW);
